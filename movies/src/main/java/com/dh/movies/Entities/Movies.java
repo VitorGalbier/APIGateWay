@@ -1,4 +1,4 @@
-package Entities;
+package com.dh.movies.Entities;
 
 import lombok.Data;
 

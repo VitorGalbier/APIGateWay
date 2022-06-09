@@ -1,9 +1,11 @@
-package Service;
+package com.dh.movies.Service;
 
-import Entities.Movies;
-import Repository.MoviesRepository;
+import com.dh.movies.Entities.Movies;
+import com.dh.movies.Repository.MoviesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class MovieServiceImpl implements IMovieService{
@@ -17,7 +19,7 @@ public class MovieServiceImpl implements IMovieService{
     }
 
     @Override
-    public String findByGenre(String genre) {
-        return moviesRepository.findByGenre(genre).getName();
+    public List<Movies> findByGenre(String genre) {
+        return moviesRepository.findByGenre(genre);
     }
 }
